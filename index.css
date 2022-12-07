@@ -1,62 +1,141 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 /* Style for navbar */
-nav{
+nav {
     display: flex;
-    padding: 1% 2%; 
+    padding: 1% 2%;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
-.logo img{
+
+.logo img {
     width: 60%;
     margin-left: 60px;
 }
 
- ul{
+ul {
     display: flex;
     justify-content: space-between;
 }
- li {
+
+li {
     list-style: none;
     margin-left: 30px;
     margin-right: 60px;
 }
- li a{
+
+li a {
     text-decoration: none;
     font-size: medium;
     font-weight: bold;
     color: black;
-    
+
 }
- li a::after{
+
+li a::after {
     content: '';
-    width:  0;
+    width: 0;
     height: 3px;
     background-color: #0E2D50;
     display: block;
 }
- li a:hover::after{
+
+li a:hover::after {
     width: 100%;
     transition: width 0.3s linear;
 }
-li a:hover{
+
+li a:hover {
     color: #0097c9;
 }
-hr{
+
+hr {
     width: 100%;
-    height: 8px;
+    height: 4px;
     background-color: aqua;
 }
 
-/* Style for footer */
-.footer{
-    position: fixed;
+/* Slide show of photos */
+/* .mainPhoto{
+    height: 100px;
+} */
+.photos {
+    margin-top: 10px;
+    width: 100%;
+    ;
+    height: 440px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(/IMAGE/game.jpg);
+    background-size: 100% 100%;
+    animation: slider 15s infinite linear;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url(/IMAGE/game.jpg);
+    }
+
+    30% {
+        background-image: url(/IMAGE/class.jpg);
+    }
+
+    61% {
+        background-image: url(/IMAGE/painting1.jpg);
+    }
+}
+
+.content {
+    position: relative;
+    top: 435px;
+}
+/* css for scrolling text */
+@-webkit-keyframes scroll{
+    0%{
+          -webkit-transform: translate(0,0);
+    }
+    100%{
+        -webkit-transform: translate(-100%,0);
+    }
+
+}
+.scrolls{
+    height: 30px;
+    background-color: #0E2D50;
+    border-bottom: 4px solid aqua;
+    border-top: 4px solid aqua;
+    color: white;
+    display: block;
+    font-family: sans-serif;
+    font-weight: 200;
+    width: 100%;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+}
+.scrolls span{
+    display: inline-block;
+    padding-left: 100%;
+    -webkit-animation: scroll 15s infinite linear;
+}
+
+.footer {
+    position: relative;
     left: 0;
     bottom: 0;
+    top: 80vh;
     width: 100%;
-    background-color:#212529;
+    background-color: #212529;
     color: white;
     text-align: center;
 }
+
+
